@@ -56,13 +56,11 @@ function calculator() {
     alert(`Resultado: ${result}`);
 }
 
-// función para imprimir números del 0 al 5
+// imprimir números del 0 al 5 + frase motivadora
 function imprimirNumeros() {
     for (let i = 1; i <= 5; i++) {
         alert(i);
     }
-
-    // Frase motivadora que se imprime después del bucle
     alert("¡Persistencia y esfuerzo son la clave del éxito! ¡Sigue adelante!");
 }
 
