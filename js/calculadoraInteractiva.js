@@ -1,19 +1,17 @@
-// sumar
+// Funciones de cálculo
+
 function sumar(a, b) {
     return a + b;
 }
 
-// restar
 function restar(a, b) {
     return a - b;
 }
 
-// multiplicar
 function multiplicar(a, b) {
     return a * b;
 }
 
-// dividir
 function dividir(a, b) {
     if (b !== 0) {
         return a / b;
@@ -22,16 +20,23 @@ function dividir(a, b) {
     }
 }
 
-function calculator() {
-    const operation = prompt("Seleccione una operación: +, -, *, / (o 'salir' para salir)");
+// Calculadora
 
-    if (operation.toLowerCase() === "salir") {
+function calculator() {
+    const operation = prompt("Seleccione una operación: +, -, *, / (o 'salir' para salir)").toLowerCase();
+
+    if (operation === "salir") {
         console.log("Calculadora cerrada.");
         return;
     }
 
     const num1 = parseFloat(prompt("Ingrese el primer número:"));
     const num2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, ingrese números válidos.");
+        return;
+    }
 
     let result;
 
@@ -56,7 +61,8 @@ function calculator() {
     alert(`Resultado: ${result}`);
 }
 
-// imprimir números del 0 al 5 + frase motivadora
+// Impresora motivadora
+
 function imprimirNumeros() {
     for (let i = 1; i <= 5; i++) {
         alert(i);
@@ -64,11 +70,12 @@ function imprimirNumeros() {
     alert("¡Persistencia y esfuerzo son la clave del éxito! ¡Sigue adelante!");
 }
 
-const userChoice = prompt('¿Desea usar la "Calculadora" o la "Impresora Motivadora" para imprimir numeros del 0 al 5 y recibir una frase motivadora? (Escribir "calculadora" o "impresora")')
+// Elección del usuario
 
-if(userChoice.toLowerCase() === 'calculadora'){
+const userChoice = prompt('¿Desea usar la "Calculadora" o la "Impresora Motivadora" para imprimir números del 0 al 5 y recibir una frase motivadora? (Escribir "calculadora" o "impresora")').toLowerCase();
+
+if (userChoice === 'calculadora') {
     calculator();
-}
-else if(userChoice.toLowerCase() === 'impresora'){
+} else if (userChoice === 'impresora') {
     imprimirNumeros();
 }
