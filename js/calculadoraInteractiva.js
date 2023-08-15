@@ -1,19 +1,19 @@
-// función para sumar dos números
+// sumar
 function sumar(a, b) {
     return a + b;
 }
 
-// función para restar dos números
+// restar
 function restar(a, b) {
     return a - b;
 }
 
-// función para multiplicar dos números
+// multiplicar
 function multiplicar(a, b) {
     return a * b;
 }
 
-// función para dividir dos números
+// dividir
 function dividir(a, b) {
     if (b !== 0) {
         return a / b;
@@ -37,19 +37,19 @@ function calculator() {
 
     switch (operation) {
         case "+":
-            result = sumNum(num1, num2);
+            result = sumar(num1, num2);
             break;
         case "-":
-            result = restarNum(num1, num2);
+            result = restar(num1, num2);
             break;
         case "*":
-            result = multiNum(num1, num2);
+            result = multiplicar(num1, num2);
             break;
         case "/":
-            result = divNum(num1, num2);
+            result = dividir(num1, num2);
             break;
         default:
-            console.log('Operación inválida');
+            alert('Operación inválida');
             return;
     }
 
@@ -68,9 +68,9 @@ function imprimirNumeros() {
 
 const userChoice = prompt('¿Desea usar la "Calculadora" o la "Impresora Motivadora" para imprimir numeros del 0 al 5 y recibir una frase motivadora? (Escribir "calculadora" o "impresora")')
 
-if(userChoice === 'calculadora'){
+if(userChoice.toLowerCase() === 'calculadora'){
     calculator();
 }
-else if(userChoice === 'impresora'){
+else if(userChoice.toLowerCase() === 'impresora'){
     imprimirNumeros();
 }
