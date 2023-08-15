@@ -24,7 +24,7 @@ function calculator() {
 
     if (operation.toLowerCase() === "salir") {
         console.log("Calculadora cerrada.");
-        return; // Sale de la función si se elige "salir"
+        return;
     }
 
     const num1 = parseFloat(prompt("Ingrese el primer número:"));
@@ -50,7 +50,7 @@ function calculator() {
             return; // Sale de la función si la operación es inválida
     }
 
-    console.log(`Resultado: ${result}`);
+    alert(`Resultado: ${result}`);
 }
 
 // Iniciar la calculadora
